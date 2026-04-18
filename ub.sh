@@ -38,7 +38,7 @@ RAMMS=$(free -m | awk 'NR==2 {print $2}')
 KEY="656886415:AAHVyIZ2LscFzB1Bm8Kt24W10mogYkEDU60"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 GITHUB_CMD="https://github.com/Debbyzeus/Autoscript/raw/"
-NAMECOM=$(curl -sS https://sc-xray.yha.my.id/ip | grep $MYIP | awk '{print $2}')
+NAMECOM=$(curl -sS https://sc-xray.yha.my.id | grep $MYIP | awk '{print $2}')
 OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 Date_list=$(date +"%Y-%m-%d" -d "$dateFromServer")
